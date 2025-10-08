@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voucher Červený Jelen - SmartVoucher</title>
+    <link rel="stylesheet" href="./src/css/app.css" />
+</head>
+<body class="antialiased text-base">
+    <div class="mx-[16px] sm:mx-[24px] md:mx-[40px] lg:mx-[60px] xl:mx-[80px] mt-[16px] sm:mt-[20px]">
+        <header class="bg-white">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center">
+                    <img src="/assets/sv-header.svg" alt="Smart Voucher"
+                        class="md:w-[80px] w- w-auto text-[var(--muted)]" />
+                </a>
+                <div class="flex flex-col items-center text-center">
+                    <img src="/assets/logo.svg" alt="Červený Jelen" class="md:w-[105px] w-[70px] w-auto mb-1" />
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="h-[32px] w-[32px] rounded-[8px] flex items-center justify-center bg-[var(--card-bg)] cursor-pointer"
+                        aria-label="Informace">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--muted)]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </button>
+                    <button
+                        class="h-[32px] w-[32px] rounded-[8px] flex items-center justify-center bg-[var(--card-bg)] text-[var(--muted)] text-[12px] font-[700] cursor-pointer"
+                        aria-label="Změnit jazyk">
+                        CZ
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="mt-[32px] sm:mt-[48px] lg:mt-[60px] w-full flex flex-col gap-[32px] gap-[48px] lg:gap-[64px]">
+            <section>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-[24px] lg:gap-[40px]">
+                    <div class="lg:col-span-3 order-last lg:order-first flex flex-col gap-[20px]">
+                        <a href="/" class="flex items-center gap-2 text-[15px] text-[var(--muted)] w-fit">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                            Zpět do výběru
+                        </a>
+                        <h1 class="text-[28px] md:text-[36px] lg:text-[44px]">Škola čepování - ZÁŽITEK</h1>
+                        <p class="text-[16px] sm:text-[17px] md:text-[18px] max-w-full lg:max-w-[80%]">
+                            Originální dárek pro jednotlivce i pro skupiny. Naučte se čepovat a porozumějte pivu s Pantátou Výčepním. Voucher v hodnotě 1842,-
+                        </p>
+
+                        <div class="accordions" id="voucher-accordion">
+                            <article class="accordion-item" data-open="true">
+                                <header data-acc-toggle>
+                                    <h3>Obsah voucheru</h3>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"/></svg>
+                                </header>
+                                <div class="accordion-content" data-acc-content>
+                                    Tradiční husí specialita, mladé víno a večer plný chutí – rezervujte si místo včas! Přijďte si vychutnat svatomartinské menu v příjemné atmosféře s doprovodem živé hudby. Kapacita je omezená, proto doporučujeme rezervaci co nejdříve. Voucher na degustační menu s vinným párováním v hodnotě 1 299 Kč.
+                                </div>
+                            </article>
+
+                            <article class="accordion-item" data-open="false">
+                                <header data-acc-toggle>
+                                    <h3>Omezení</h3>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"/></svg>
+                                </header>
+                                <div class="accordion-content" hidden data-acc-content>
+                                    Poukaz lze uplatnit pouze v dané pobočce a nelze ho směnit za peníze. Platnost voucheru je šest měsíců od data zakoupení, poté jej obsluha nemusí přijmout. V případě, že byste voucher nestihli vyčerpat, kontaktujte nás prosím ještě před uplynutím této lhůty.
+                                </div>
+                            </article>
+
+                            <article class="accordion-item" data-open="false">
+                                <header data-acc-toggle>
+                                    <h3>Jak voucher využít?</h3>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"/></svg>
+                                </header>
+                                <div class="accordion-content" hidden data-acc-content>
+                                    Při uzavírání účtu prosím informujte personál, že budete platit prostřednictvím voucheru.
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2">
+                        <img src="/assets/hero.jpg" alt="Škola čepování" class="w-full rounded-[var(--radius-surface)] object-cover max-h-[540px]" />
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-[var(--footer-bg)] mt-[90px]">
+        <div class="mx-[16px] sm:mx-[24px] md:mx-[40px] lg:mx-[60px] xl:mx-[80px] py-[32px] sm:py-[40px] lg:py-[48px]">
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 gap-[40px]">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col gap-[32px]">
+                    <img src="/assets/sv-footer.svg" alt="Smart Voucher" class="w-[140px]" />
+                    <p class="text-[16px] font-[700] text-[var(--muted)]">
+                        Chytrý způsob, jak darovat radost.
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-3 lg:col-span-1 flex flex-col md:flex-row gap-4 justify-evenly">
+                    <div class="footer-card">
+                        <h6>Pro zákazníky</h6>
+                        <nav>
+                            <a href="#">Jak to funguje?</a>
+                            <a href="#">Ověření voucheru</a>
+                        </nav>
+                    </div>
+                    <div class="footer-card">
+                        <h6>Pro partnery</h6>
+                        <nav>
+                            <a href="#">Přihlášení</a>
+                            <a href="#">Chci prodávat vouchery</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-card">
+                        <h6>Podpora</h6>
+                        <nav>
+                            <a href="mailto:podpora@smartvoucher.cz" class="underline">podpora@smartvoucher.cz</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px bg-[var(--footer-hr)] md:mt-[64px] mt-[20px] mb-[12px]"></div>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-[12px] md:gap-[28px]">
+                <span class="text-[14px] font-[400] text-[var(--footer-text)] order-last md:order-first">© 2025 Smart Voucher</span>
+                <nav class="flex flex-col md:flex-row md:items-center gap-[12px] md:gap-[28px] text-[14px] text-[var(--footer-text)]">
+                    <a href="#" class="hover:underline">Obchodní Podmínky</a>
+                    <a href="#" class="hover:underline">Soukromí</a>
+                    <a href="#" class="hover:underline">Cookies</a>
+                    <a href="#" class="hover:underline">Provozují</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="/src/js/ui.js"></script>
+
+</html>
