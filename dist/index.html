@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartVoucher</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-BEWXy7f3.css">
+</head>
+
+<body class="sv-page">
+    <div class="sv-container mt-[16px] sm:mt-[20px]">
+        <header class="sv-header">
+            <div class="sv-header-row">
+                <a href="/" class="flex items-center">
+                    <img src="/assets/sv-header.svg" alt="Smart Voucher"
+                        class="sv-header-logo" />
+                </a>
+                <div class="sv-header-venue">
+                    <img src="/assets/logo.svg" alt="Červený Jelen" />
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="icon-btn" aria-label="Informace">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--muted)]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </button>
+                    <hr class="hidden md:block w-[2px] h-[30px] bg-[var(--card-bg)]">
+                    <div class="lang-selector" data-lang-selector>
+                        <button class="lang-selector-trigger" data-lang-trigger aria-label="Změnit jazyk">
+                            <span data-lang-current>CZ</span>
+                        </button>
+                        <div class="lang-selector-dropdown" data-lang-dropdown>
+                            <button class="lang-selector-option active" data-lang="cz">CZ</button>
+                            <button class="lang-selector-option" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="mt-[32px] sm:mt-[48px] lg:mt-[60px] w-full flex flex-col gap-[32px] gap-[48px] lg:gap-[64px]">
+            <!-- Hero -->
+            <section class="flex flex-col gap-[24px]">
+                <img src="/assets/hero.jpg" alt="Restaurace Červený Jelen"
+                    class="w-full max-h-[240px] max-h-[150px] sm:max-h-[200px] md:max-h-[350px] xl:max-h-[450px] rounded-3xl object-cover" />
+                <h1 class="text-[28px] md:text-[36px] lg:text-[44px]">Dárkové poukazy - Červený Jelen</h1>
+                <p class="text-[16px] sm:text-[17px] md:text-[18px] max-w-full md:max-w-[70%] lg:max-w-[60%]">
+                    Vyberte si z dárkových poukazů na gastronomické zážitky, řízené
+                    degustace i volnou konzumaci v restauraci Červený jelen. Všechny
+                    poukazy jsou platné 12 měsíců od zakoupení a představují ideální
+                    dárek pro každou příležitost.
+                </p>
+            </section>
+            <!-- Vouchers -->
+            <section>
+                <h2>Dárkový vouchery</h2>
+                <div class="voucher-grid">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <h2>Zážitkové vouchery</h2>
+                <div class="voucher-grid">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card2.jpg" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
+                        <span class="voucher-badge">+10 % navíc zdarma</span>
+                        <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
+                        <div class="p-[16px]">
+                            <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
+                            <p class="voucher-desc">
+                                Popis voucheru je důležitá část karty, která rozhodně nesmí…
+                            </p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <span class="voucher-price">500 Kč</span>
+                                <a href="#" class="voucher-link">Více informací</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-[64px] md:gap-[36px] lg:gap-[40px] mt-[64px]">
+                    <div class="md:col-span-2 lg:col-span-2">
+                        <h2>O podniku</h2>
+                        <div class="flex flex-col gap-4 mt-[32px] about-text">
+                            <p>
+                                Kubisticko-modernistický prostor bývalé Anglo-československé
+                                banky vytvořený Josefem Gočárem mezi světovými válkami, který
+                                citlivě změnil do podoby unikátní restaurace Stanislav Fiala.
+                            </p>
+                            <p>
+                                Dvanáctitanková pivní věž, gril Inferno, červení létající
+                                dvanácteráci, unikátní architektura, kuřácká i nekuřácká
+                                zahrádka, vřelá a energická atmosféra, výjimečné grilové i à
+                                la carte pokrmy, perfektní pivo, skvělé dezerty, kvalitní
+                                vína, pálenky Šporc...
+                            </p>
+                            <p>
+                                To vše a mnoho dalšího v sobě skrývá restaurace Červený Jelen
+                                v Hybernské ulici v Praze.
+                            </p>
+                            <p>Těšíme se na Vaši návštěvu!</p>
+                            <p>
+                                Za tým Červeného Jelena: Radek Tureček (ředitel), Marek
+                                Fichtner (executive chef), Mira "Pantáta" Nekolný (mistr
+                                výčepní), Klárka Řezníčková (vedoucí cukrářka)
+                            </p>
+                            <a href="https://www.cervenyjelen.cz/" target="_blank" rel="noreferrer noopener"
+                                class="text-[var(--brand)] underline w-fit">
+                                https://www.cervenyjelen.cz/
+                            </a>
+                            <div class="flex items-center gap-6 mt-2 text-[var(--muted)]">
+                                <a href="tel:+420735123647" aria-label="Zavolat">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.25 3.4502C0.25 2.06948 1.36929 0.950195 2.75 0.950195H3.89302C4.61 0.950195 5.23498 1.43816 5.40887 2.13373L6.33037 5.81972C6.48284 6.42961 6.25495 7.07149 5.75202 7.44868L4.674 8.25719C4.56206 8.34115 4.53772 8.46409 4.56917 8.54993C5.51542 11.1331 7.5671 13.1848 10.1503 14.131C10.2361 14.1625 10.359 14.1381 10.443 14.0262L11.2515 12.9482C11.6287 12.4452 12.2706 12.2174 12.8805 12.3698L16.5665 13.2913C17.262 13.4652 17.75 14.0902 17.75 14.8072V15.9502C17.75 17.3309 16.6307 18.4502 15.25 18.4502H13.375C6.12626 18.4502 0.25 12.5739 0.25 5.3252V3.4502Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="mailto:info@cervenyjelen.cz" aria-label="Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="10" height="19" viewBox="0 0 10 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.10135 6.6167H6.30745V4.80059C6.30745 4.1183 6.7634 3.95955 7.08458 3.95955H9.05628V0.960605L6.34115 0.950195C3.32715 0.950195 2.64148 3.18661 2.64148 4.61798V6.6167H0.898193V9.70673H2.64148V18.4503H6.30789V9.70673H8.78192L9.10179 6.6167H9.10135Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"
+                                        fill="currentColor">
+                                        <path
+                                            d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 18.5 5.5 5.5 0 0112 7.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zm5.75-3.25a1.25 1.25 0 11-1.25 1.25 1.25 1.25 0 011.25-1.25z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <h3>Provozovny</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[32px]">
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-[var(--footer-bg)] mt-[90px]">
+        <div class="mx-[16px] sm:mx-[24px] md:mx-[40px] lg:mx-[60px] xl:mx-[80px] py-[32px] sm:py-[40px] lg:py-[48px]">
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 gap-[40px]">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col gap-[32px]">
+                    <img src="/assets/sv-footer.svg" alt="Smart Voucher" class="w-[140px]" />
+                    <p class="text-[16px] font-[700] text-[var(--muted)]">
+                        Chytrý způsob, jak darovat radost.
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-3 lg:col-span-1 flex flex-col md:flex-row gap-4 justify-evenly">
+                    <div class="footer-card">
+                        <h6>Pro zákazníky</h6>
+                        <nav>
+                            <a href="#">Jak to funguje?</a>
+                            <a href="/verification.html">Ověření voucheru</a>
+                        </nav>
+                    </div>
+                    <div class="footer-card">
+                        <h6>Pro partnery</h6>
+                        <nav>
+                            <a href="#">Přihlášení</a>
+                            <a href="#">Chci prodávat vouchery</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-card">
+                        <h6>Podpora</h6>
+                        <nav>
+                            <a href="mailto:podpora@smartvoucher.cz" class="underline">podpora@smartvoucher.cz</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px bg-[var(--footer-hr)] md:mt-[64px] mt-[20px] mb-[12px]"></div>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-[12px] md:gap-[28px]">
+                <span class="text-[14px] font-[400] text-[var(--footer-text)] order-last md:order-first">© 2025 Smart Voucher</span>
+                <nav class="flex flex-col md:flex-row md:items-center gap-[12px] md:gap-[28px] text-[14px] text-[var(--footer-text)]">
+                    <a href="#" class="hover:underline">Obchodní Podmínky</a>
+                    <a href="#" class="hover:underline">Soukromí</a>
+                    <a href="#" class="hover:underline">Cookies</a>
+                    <a href="#" class="hover:underline">Provozují</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/src/js/ui.js"></script>
+</html>
