@@ -125,30 +125,9 @@
 
 })();
 
-// buy.html
+// ---------- TOGGLES show/hide (GLOBAL - works on all pages) ----------
 (() => {
-  // Early return if we're not on the buy page
-  if (!document.querySelector('[data-summary]')) return;
-  
   const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-  const num = (v, d=0) => Number.isFinite(+v) ? +v : d;
-  const fmt = (n) => `${n.toLocaleString('cs-CZ')} Kč`;
-
-  // ---------- COUNTER (note) ----------
-  const updateCounter = (input) => {
-    const max = num(input.dataset.counterMax, 0);
-    const out = $(input.dataset.counterTarget);
-    if (!out) return;
-    const len = input.value.length;
-    out.textContent = max ? `${len}/${max} znaků` : `${len}`;
-  };
-  $$( '[data-counter-input]' ).forEach(el => {
-    updateCounter(el);
-    el.addEventListener('input', () => updateCounter(el));
-  });
-
-  // ---------- TOGGLES show/hide (more payments, company form, etc.) ----------
   const setHidden = (el, hidden) => { if (el) el.hidden = hidden; };
   const setCollapsed = (sel, open) => {
     const el = $(sel);
@@ -192,6 +171,30 @@
         toggleBtn.textContent = expanded ? toggleBtn.dataset.textOff : toggleBtn.dataset.textOn;
       }
     }
+  });
+})();
+
+// buy.html
+(() => {
+  // Early return if we're not on the buy page
+  if (!document.querySelector('[data-summary]')) return;
+  
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const num = (v, d=0) => Number.isFinite(+v) ? +v : d;
+  const fmt = (n) => `${n.toLocaleString('cs-CZ')} Kč`;
+
+  // ---------- COUNTER (note) ----------
+  const updateCounter = (input) => {
+    const max = num(input.dataset.counterMax, 0);
+    const out = $(input.dataset.counterTarget);
+    if (!out) return;
+    const len = input.value.length;
+    out.textContent = max ? `${len}/${max} znaků` : `${len}`;
+  };
+  $$( '[data-counter-input]' ).forEach(el => {
+    updateCounter(el);
+    el.addEventListener('input', () => updateCounter(el));
   });
 
   // ---------- CUSTOM SELECT ----------
