@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="./src/css/app.css" />
 </head>
 
-<body class="antialiased text-base">
-    <div class="mx-[16px] sm:mx-[24px] md:mx-[40px] lg:mx-[60px] xl:mx-[80px] mt-[16px] sm:mt-[20px]">
-        <header class="bg-white">
-            <div class="flex items-center justify-between">
+<body class="sv-page">
+    <div class="sv-container mt-[16px] sm:mt-[20px]">
+        <header class="sv-header">
+            <div class="sv-header-row">
                 <a href="/" class="flex items-center">
                     <img src="/assets/sv-header.svg" alt="Smart Voucher"
-                        class="md:w-[80px] w- w-auto text-[var(--muted)]" />
+                        class="sv-header-logo" />
                 </a>
-                <div class="flex flex-col items-center text-center">
-                    <img src="/assets/logo.svg" alt="Červený Jelen" class="md:w-[105px] w-[70px] w-auto mb-1" />
+                <div class="sv-header-venue">
+                    <img src="/assets/logo.svg" alt="Červený Jelen" />
                 </div>
                 <div class="flex items-center gap-3">
-                    <button
-                        class="h-[32px] w-[32px] rounded-[8px] flex items-center justify-center bg-[var(--card-bg)] cursor-pointer"
-                        aria-label="Informace">
+                    <button class="icon-btn" aria-label="Informace">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--muted)]" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
                         </svg>
                     </button>
-                    <button
-                        class="h-[32px] w-[32px] rounded-[8px] flex items-center justify-center bg-[var(--card-bg)] text-[var(--muted)] text-[12px] font-[700] cursor-pointer"
-                        aria-label="Změnit jazyk">
-                        CZ
-                    </button>
+                    <hr class="hidden md:block w-[2px] h-[30px] bg-[var(--card-bg)]">
+                    <div class="lang-selector" data-lang-selector>
+                        <button class="lang-selector-trigger" data-lang-trigger aria-label="Změnit jazyk">
+                            <span data-lang-current>CZ</span>
+                        </button>
+                        <div class="lang-selector-dropdown" data-lang-dropdown>
+                            <button class="lang-selector-option active" data-lang="cz">CZ</button>
+                            <button class="lang-selector-option" data-lang="en">EN</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -54,7 +57,7 @@
             <section>
                 <h2>Dárkový vouchery</h2>
                 <div class="voucher-grid">
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -68,7 +71,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -82,7 +85,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -96,7 +99,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
                             <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
@@ -109,7 +112,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
                             <h3 class="voucher-title">Voucher v hodnotě 500 Kč</h3>
@@ -127,7 +130,7 @@
             <section>
                 <h2>Zážitkové vouchery</h2>
                 <div class="voucher-grid">
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card2.jpg" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -141,7 +144,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -155,7 +158,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="voucher-card" onclick="window.location.href='/detail.html'">
+                    <article class="voucher-card" onclick="window.location.href='/buy.html'">
                         <span class="voucher-badge">+10 % navíc zdarma</span>
                         <img src="/assets/card.png" alt="Voucher Červený Jelen 500 Kč" />
                         <div class="p-[16px]">
@@ -175,7 +178,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-[64px] md:gap-[36px] lg:gap-[40px] mt-[64px]">
                     <div class="md:col-span-2 lg:col-span-2">
                         <h2>O podniku</h2>
-                        <div class="flex flex-col gap-4 mt-4 about-text">
+                        <div class="flex flex-col gap-4 mt-[32px] about-text">
                             <p>
                                 Kubisticko-modernistický prostor bývalé Anglo-československé
                                 banky vytvořený Josefem Gočárem mezi světovými válkami, který
@@ -238,7 +241,7 @@
                     </div>
                     <div class="md:col-span-4 lg:col-span-3">
                         <h3>Provozovny</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[32px]">
                             <div class="surface-card">
                                 <h6>Červený Jelen</h6>
                                 <p>
@@ -247,7 +250,8 @@
                                     Tel: +420 735 123 647
                                 </p>
                                 <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
-                                    rel="noreferrer noopener">
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
                                     Zobrazit na mapě
                                 </a>
                             </div>
@@ -260,7 +264,8 @@
                                     Tel: +420 735 123 647
                                 </p>
                                 <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
-                                    rel="noreferrer noopener">
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
                                     Zobrazit na mapě
                                 </a>
                             </div>
@@ -273,7 +278,8 @@
                                     Tel: +420 735 123 647
                                 </p>
                                 <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
-                                    rel="noreferrer noopener">
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
                                     Zobrazit na mapě
                                 </a>
                             </div>
@@ -286,7 +292,8 @@
                                     Tel: +420 735 123 647
                                 </p>
                                 <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
-                                    rel="noreferrer noopener">
+                                    rel="noreferrer noopener"
+                                    class="text-[var(--brand)]">
                                     Zobrazit na mapě
                                 </a>
                             </div>
@@ -310,7 +317,7 @@
                         <h6>Pro zákazníky</h6>
                         <nav>
                             <a href="#">Jak to funguje?</a>
-                            <a href="#">Ověření voucheru</a>
+                            <a href="/verification.html">Ověření voucheru</a>
                         </nav>
                     </div>
                     <div class="footer-card">
@@ -344,5 +351,5 @@
         </div>
     </footer>
 </body>
-
+<script src="/src/js/ui.js"></script>
 </html>

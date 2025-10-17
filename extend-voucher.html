@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartVoucher</title>
+    <link rel="stylesheet" href="./src/css/app.css" />
+</head>
+
+<body class="sv-page">
+    <hr class="absolute w-full border-[var(--footer-hr)] mt-[120px]">
+    <div class="sv-container mt-[16px] sm:mt-[20px]">
+        <header class="sv-header">
+            <div class="sv-header-row">
+                <a href="/" class="flex items-center">
+                    <img src="/assets/sv-header.svg" alt="Smart Voucher"
+                        class="sv-header-logo" />
+                </a>
+                <div class="sv-header-venue">
+                    <img src="/assets/logo.svg" alt="Červený Jelen" />
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="icon-btn" aria-label="Informace">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--muted)]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </button>
+                    <hr class="hidden md:block w-[2px] h-[30px] bg-[var(--card-bg)]">
+                    <div class="lang-selector" data-lang-selector>
+                        <button class="lang-selector-trigger" data-lang-trigger aria-label="Změnit jazyk">
+                            <span data-lang-current>CZ</span>
+                        </button>
+                        <div class="lang-selector-dropdown" data-lang-dropdown>
+                            <button class="lang-selector-option active" data-lang="cz">CZ</button>
+                            <button class="lang-selector-option" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="sv-main">
+            <section class="sv-compact-header">
+                <div class="sv-compact-thumb">
+                    <img src="/assets/card2.jpg" alt="Škola čepování - ZÁŽITEK" />
+                </div>
+                <div class="sv-compact-body">
+                    <div class="flex flex-col">
+                        <h5 class="font-[700] text-[var(--muted)]">Červený Jelen</h5>
+                        <h5 class="mt-[4px] mb-[8px]">Škola čepování - ZÁŽITEK</h5>
+                        <p class="text-[16px] text-[var(--muted)]">
+                            Originální dárek pro jednotlivce i pro skupiny. Naučte se čepovat a porozuměijte...
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-between h-full items-end flex-shrink-0">
+                        <div class="text-right">
+                            <p class="text-[16px] font-[500] text-[var(--text)] mb-[8px]">Platnost voucheru do:</p>
+                            <h5>31. 05. 2025</h5>
+                        </div>
+                        <a href="/detail-voucher.html" class="sv-btn-ghost-sm">
+                            zpět do detailu
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <hr class="w-full border-[var(--footer-hr)] mt-[32px] mb-[32px] hidden md:block">
+            <section class="max-w-[630px] w-full mx-auto">
+                <h3 class="text-center mb-[32px]">Prodloužit voucher</h3>
+                <form class="bg-white rounded-[16px] border border-[var(--footer-hr)] p-[16px] md:p-[32px]">
+                    <p class="text-[16px] font-[400] text-[var(--text)] mb-[32px] text-center md:text-left w-[80%] mx-auto md:w-full">
+                        Můžete prodloužit platnost do 
+                        <b>29. 8. 2025</b> za poplatek 500,00 Kč
+                    </p>
+                    <h5 class="mb-[12px]">Fakturační údaje</h5>
+                    <div class="flex flex-col gap-[16px]">
+                        <div class="sv-float-root">
+                            <input type="text" name="first_name" placeholder="Jméno" class="sv-float-input peer" id="first_name" />
+                            <label for="first_name"
+                                class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
+                                Jméno
+                            </label>
+                        </div>
+                        <div class="sv-float-root">
+                            <input type="text" name="last_name" placeholder="Příjmení" class="sv-float-input peer" id="last_name" />
+                            <label for="last_name"
+                                class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
+                                Příjmení
+                            </label>
+                        </div>
+                        <div class="sv-float-root">
+                            <input type="email" name="email" placeholder="E-mail" class="sv-float-input peer" id="email" />
+                            <label for="email"
+                                class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
+                                E-mail
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:mt-[48px] mt-[32px]">
+                        <h5>Platba</h6>
+                            <p class="mt-[8px] md:mb-[24px] mb-[16px] font-[400] text-[16px] text-[var(--muted)]">
+                                Vyberte si způsob platby
+                            </p>
+                            <fieldset class="sv-pay-group" data-payment-group>
+                                <label class="payment-option">
+                                    <input class="peer sr-only" type="radio" name="payment" value="qr" data-payment />
+                                    <div
+                                        class="payment-option-inner">
+                                        <span class="payment-option-check">
+                                            <svg class="payment-check opacity-0 transition-opacity" width="10"
+                                                height="8" viewBox="0 0 10 8" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.800049 4.6L3.20005 7L9.20005 1" stroke="var(--brand)"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <div class="flex-1">
+                                            <div class="payment-option-row">
+                                                <div class="flex flex-col gap-1">
+                                                    <div class="payment-option-title">
+                                                        QR okamžitá platba
+                                                    </div>
+                                                    <p
+                                                        class="payment-option-desc">
+                                                        Rychlá platba pomocí QR kódu ve vašem
+                                                        bankovnictví
+                                                    </p>
+                                                </div>
+                                                <div class="payment-option-icon">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_3939_7523)">
+                                                            <path d="M2.5 3.16699H5V5.66699H2.5V3.16699Z"
+                                                                fill="currentColor" />
+                                                            <path
+                                                                d="M7.5 0.666992V8.16699H0V0.666992H7.5ZM6.25 1.91699H1.25V6.91699H6.25V1.91699ZM5 15.667H2.5V18.167H5V15.667Z"
+                                                                fill="currentColor" />
+                                                            <path
+                                                                d="M7.5 13.167V20.667H0V13.167H7.5ZM1.25 14.417V19.417H6.25V14.417H1.25ZM15 3.16699H17.5V5.66699H15V3.16699Z"
+                                                                fill="currentColor" />
+                                                            <path
+                                                                d="M12.5 0.666992V8.16699H20V0.666992H12.5ZM18.75 1.91699V6.91699H13.75V1.91699H18.75ZM10 1.91699V0.666992H11.25V3.16699H10V5.66699H8.75V1.91699H10ZM10 8.16699V5.66699H11.25V8.16699H10ZM7.5 10.667V9.41699H8.75V8.16699H10V10.667H11.25V9.41699H17.5V10.667H12.5V11.917H8.75V10.667H7.5ZM7.5 10.667V11.917H2.5V10.667H1.25V11.917H0V9.41699H3.75V10.667H7.5ZM20 11.917H18.75V9.41699H20V11.917ZM18.75 11.917H17.5V14.417H20V13.167H18.75V11.917ZM13.75 11.917H16.25V13.167H15V14.417H13.75V11.917ZM16.25 15.667V14.417H15V15.667H13.75V16.917H11.25V18.167H15V15.667H16.25ZM16.25 15.667H20V16.917H17.5V18.167H16.25V15.667ZM11.25 14.417V15.667H12.5V13.167H8.75V14.417H11.25Z"
+                                                                fill="currentColor" />
+                                                            <path
+                                                                d="M8.75 15.667H10V19.417H15V20.667H8.75V15.667ZM20 18.167V20.667H16.25V19.417H18.75V18.167H20Z"
+                                                                fill="currentColor" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_3939_7523">
+                                                                <rect width="20" height="20" fill="white"
+                                                                    transform="translate(0 0.666992)" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="payment-option-border rounded-t-[12px] rounded-b-[12px]">
+                                    </span>
+                                </label>
+                                <div class="mt-4 space-y-3 hidden" data-collapsible id="payments-more">
+                                    <label class="payment-option">
+                                        <input class="peer sr-only" type="radio" name="payment" value="gpay"
+                                            data-payment />
+                                        <div class="payment-option-inner">
+                                            <span class="payment-option-check">
+                                                <svg class="payment-check opacity-0 transition-opacity" width="10"
+                                                    height="8" viewBox="0 0 10 8" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.800049 4.6L3.20005 7L9.20005 1" stroke="var(--brand)"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+
+                                            <div class="flex-1">
+                                                <div class="payment-option-row">
+                                                    <div class="flex flex-col gap-1">
+                                                        <div class="payment-option-title">
+                                                            Google Pay
+                                                        </div>
+                                                        <p
+                                                            class="payment-option-desc">
+                                                            Rychlá a bezpečná platba pomocí Google Pay
+                                                        </p>
+                                                    </div>
+                                                    <img src="/assets/pay/google.svg" alt="Google Pay"
+                                                        class="w-[40px] max-w-none h-full object-contain" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="payment-option-border"> </span>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input class="peer sr-only" type="radio" name="payment" value="apple"
+                                            data-payment />
+                                        <div class="payment-option-inner">
+                                            <span class="payment-option-check">
+                                                <svg class="payment-check opacity-0 transition-opacity" width="10"
+                                                    height="8" viewBox="0 0 10 8" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.800049 4.6L3.20005 7L9.20005 1" stroke="var(--brand)"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+
+                                            <div class="flex-1">
+                                                <div class="payment-option-row">
+                                                    <div class="flex flex-col gap-1">
+                                                        <div class="payment-option-title">
+                                                            Apple Pay
+                                                        </div>
+                                                        <p
+                                                            class="payment-option-desc">
+                                                            Rychlá a bezpečná platba pomocí Apple Pay
+                                                        </p>
+                                                    </div>
+                                                    <img src="/assets/pay/apple.svg" alt="Apple Pay"
+                                                        class="w-[40px] max-w-none h-full object-contain" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="payment-option-border"> </span>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input class="peer sr-only" type="radio" name="payment" value="card"
+                                            data-payment />
+                                        <div class="payment-option-inner">
+                                            <span class="payment-option-check">
+                                                <svg class="payment-check opacity-0 transition-opacity" width="10"
+                                                    height="8" viewBox="0 0 10 8" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.800049 4.6L3.20005 7L9.20005 1" stroke="var(--brand)"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+
+                                            <div class="flex-1">
+                                                <div class="payment-option-row">
+                                                    <div class="flex flex-col gap-1">
+                                                        <div class="payment-option-title">
+                                                            Platba kartou
+                                                        </div>
+                                                        <p
+                                                            class="payment-option-desc">
+                                                            Bezpečná platba kartou přes zabezpečenou
+                                                            platební bránu
+                                                        </p>
+                                                    </div>
+                                                    <img src="/assets/pay/visa.svg" alt="Platba kartou"
+                                                        class="w-[100px] max-w-none h-full object-contain" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="payment-option-border rounded-b-[12px]">
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <a href="#" class="sv-pay-more-link"
+                                data-action="show" data-target="#payments-more">Více platebních možností</a>
+                            <a href="#"
+                                class="sv-pay-more-link hidden"
+                                data-action="hide" data-target="#payments-more">Skrýt platební možnosti</a>
+                    </div>
+
+                    <button
+                        class="md:mt-[48px] mt-[16px] w-full rounded-[12px] bg-[var(--text)] px-6 py-[16px] text-center text-[16px] font-[700] text-white transition hover:brightness-95">
+                        Zaplatit 500 Kč
+                    </button>
+
+                    <div class="mt-[12px] flex flex-col gap-[12px]">
+                        <p class="text-[14px] font-[400] text-center text-[var(--text)]">
+                            Pokračováním souhlasíte s
+                            <a href="#" class="underline text-[var(--text)] hover:text-[var(--brand)]">obchodními
+                                podmínkami.</a>
+                        </p>
+                        <div class="flex items-center justify-center gap-2">
+                            <p class="text-[12px] text-[var(--muted)] font-[400] text-center md:text-left flex flex-col md:flex-row gap-[4px]">
+                                <span class="flex items-center gap-[6px] justify-center md:justify-start">
+                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.5 4.96738V3.56738C1.5 1.63439 3.067 0.0673828 5 0.0673828C6.933 0.0673828 8.5 1.63439 8.5 3.56738V4.96738C9.2732 4.96738 9.9 5.59418 9.9 6.36738V9.86738C9.9 10.6406 9.2732 11.2674 8.5 11.2674H1.5C0.7268 11.2674 0.0999985 10.6406 0.0999985 9.86738V6.36738C0.0999985 5.59418 0.7268 4.96738 1.5 4.96738ZM7.1 3.56738V4.96738H2.9V3.56738C2.9 2.40759 3.8402 1.46738 5 1.46738C6.1598 1.46738 7.1 2.40759 7.1 3.56738Z"
+                                            fill="var(--muted)" />
+                                    </svg>
+                                    Tato stránka je zabezpečená.
+                                </span>
+                                <br class="block md:hidden"/>
+                                Všechny vaše osobní údaje jsou v bezpečí.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-[64px] md:gap-[36px] lg:gap-[40px] mt-[160px]">
+                    <div class="md:col-span-2 lg:col-span-2">
+                        <h2>O podniku</h2>
+                        <div class="flex flex-col gap-4 mt-[32px] about-text">
+                            <p>
+                                Kubisticko-modernistický prostor bývalé Anglo-československé
+                                banky vytvořený Josefem Gočárem mezi světovými válkami, který
+                                citlivě změnil do podoby unikátní restaurace Stanislav Fiala.
+                            </p>
+                            <p>
+                                Dvanáctitanková pivní věž, gril Inferno, červení létající
+                                dvanácteráci, unikátní architektura, kuřácká i nekuřácká
+                                zahrádka, vřelá a energická atmosféra, výjimečné grilové i à
+                                la carte pokrmy, perfektní pivo, skvělé dezerty, kvalitní
+                                vína, pálenky Šporc...
+                            </p>
+                            <p>
+                                To vše a mnoho dalšího v sobě skrývá restaurace Červený Jelen
+                                v Hybernské ulici v Praze.
+                            </p>
+                            <p>Těšíme se na Vaši návštěvu!</p>
+                            <p>
+                                Za tým Červeného Jelena: Radek Tureček (ředitel), Marek
+                                Fichtner (executive chef), Mira "Pantáta" Nekolný (mistr
+                                výčepní), Klárka Řezníčková (vedoucí cukrářka)
+                            </p>
+                            <a href="https://www.cervenyjelen.cz/" target="_blank" rel="noreferrer noopener"
+                                class="text-[var(--text)] underline w-fit">
+                                https://www.cervenyjelen.cz/
+                            </a>
+                            <div class="flex items-center gap-6 mt-2 text-[var(--muted)]">
+                                <a href="tel:+420735123647" aria-label="Zavolat">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.25 3.4502C0.25 2.06948 1.36929 0.950195 2.75 0.950195H3.89302C4.61 0.950195 5.23498 1.43816 5.40887 2.13373L6.33037 5.81972C6.48284 6.42961 6.25495 7.07149 5.75202 7.44868L4.674 8.25719C4.56206 8.34115 4.53772 8.46409 4.56917 8.54993C5.51542 11.1331 7.5671 13.1848 10.1503 14.131C10.2361 14.1625 10.359 14.1381 10.443 14.0262L11.2515 12.9482C11.6287 12.4452 12.2706 12.2174 12.8805 12.3698L16.5665 13.2913C17.262 13.4652 17.75 14.0902 17.75 14.8072V15.9502C17.75 17.3309 16.6307 18.4502 15.25 18.4502H13.375C6.12626 18.4502 0.25 12.5739 0.25 5.3252V3.4502Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="mailto:info@cervenyjelen.cz" aria-label="Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="10" height="19" viewBox="0 0 10 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.10135 6.6167H6.30745V4.80059C6.30745 4.1183 6.7634 3.95955 7.08458 3.95955H9.05628V0.960605L6.34115 0.950195C3.32715 0.950195 2.64148 3.18661 2.64148 4.61798V6.6167H0.898193V9.70673H2.64148V18.4503H6.30789V9.70673H8.78192L9.10179 6.6167H9.10135Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"
+                                        fill="currentColor">
+                                        <path
+                                            d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 18.5 5.5 5.5 0 0112 7.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zm5.75-3.25a1.25 1.25 0 11-1.25 1.25 1.25 1.25 0 011.25-1.25z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <h3>Provozovny</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[32px]">
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                            <div class="surface-card">
+                                <h6>Červený Jelen</h6>
+                                <p>
+                                    Hybernská 1034/5 <br />
+                                    110 00 Praha 1 <br />
+                                    Tel: +420 735 123 647
+                                </p>
+                                <a href="https://maps.google.com/?q=Hybernsk%C3%A1%201034/5%2C%20Praha" target="_blank"
+                                    rel="noreferrer noopener">
+                                    Zobrazit na mapě
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="sv-footer">
+        <div class="sv-footer-inner">
+            <div class="sv-footer-grid">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col gap-[32px]">
+                    <img src="/assets/sv-footer.svg" alt="Smart Voucher" class="w-[140px]" />
+                    <p class="text-[16px] font-[700] text-[var(--muted)]">
+                        Chytrý způsob, jak darovat radost.
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-3 lg:col-span-1 flex flex-col md:flex-row gap-4 justify-evenly">
+                    <div class="footer-card">
+                        <h6>Pro zákazníky</h6>
+                        <nav>
+                            <a href="#">Jak to funguje?</a>
+                            <a href="/verification.html">Ověření voucheru</a>
+                        </nav>
+                    </div>
+                    <div class="footer-card">
+                        <h6>Pro partnery</h6>
+                        <nav>
+                            <a href="#">Přihlášení</a>
+                            <a href="#">Chci prodávat vouchery</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-card">
+                        <h6>Podpora</h6>
+                        <nav>
+                            <a href="mailto:podpora@smartvoucher.cz" class="underline">podpora@smartvoucher.cz</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px bg-[var(--footer-hr)] md:mt-[64px] mt-[20px] mb-[12px]"></div>
+
+            <div class="sv-footer-bottom">
+                <span class="text-[14px] font-[400] text-[var(--footer-text)] order-last md:order-first">© 2025 Smart
+                    Voucher</span>
+                <nav
+                    class="flex flex-col md:flex-row md:items-center gap-[12px] md:gap-[28px] text-[14px] text-[var(--footer-text)]">
+                    <a href="#" class="hover:underline">Obchodní Podmínky</a>
+                    <a href="#" class="hover:underline">Soukromí</a>
+                    <a href="#" class="hover:underline">Cookies</a>
+                    <a href="#" class="hover:underline">Provozují</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/js/ui.js"></script>
+</body>
+
+</html>
