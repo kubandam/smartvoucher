@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartVoucher - Ověření platnosti voucheru</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-BEWXy7f3.css">
+</head>
+
+<body class="sv-page min-h-screen flex flex-col">
+    <div
+        class="flex-1 flex flex-col sv-container mt-[16px] sm:mt-[20px]">
+        <header class="sv-header">
+            <div class="sv-header-row">
+                <a href="/" class="flex items-center">
+                    <img src="/assets/sv-header.svg" alt="Smart Voucher"
+                        class="sv-header-logo" />
+                </a>
+                <div class="flex items-center gap-3">
+                    <button class="icon-btn" aria-label="Informace">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--muted)]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </button>
+                    <hr class="hidden md:block w-[2px] h-[30px] bg-[var(--card-bg)]">
+                    <div class="lang-selector" data-lang-selector>
+                        <button class="lang-selector-trigger" data-lang-trigger aria-label="Změnit jazyk">
+                            <span data-lang-current>CZ</span>
+                        </button>
+                        <div class="lang-selector-dropdown" data-lang-dropdown>
+                            <button class="lang-selector-option active" data-lang="cz">CZ</button>
+                            <button class="lang-selector-option" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main"
+            class="flex-1 mt-[32px] sm:mt-[48px] lg:mt-[84px] w-full flex flex-col items-center gap-[32px] gap-[48px] lg:gap-[64px] mb-[90px]">
+            <section class="w-full max-w-[480px] flex flex-col items-center gap-[24px]">
+                <h3 class="text-center">
+                    Ověření platnosti voucheru
+                </h3>
+                <div id="vourcher-code-form" class="sv-form-card" data-code-form>
+                    <form id="verificationForm" class="flex flex-col gap-[24px]" data-verify-form>
+                        <div class="sv-float-root">
+                            <input type="text" id="voucherCode" name="voucherCode" class="sv-float-input peer" data-voucher-code
+                                placeholder="Kód voucheru" required />
+                            <label for="voucherCode"
+                                class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
+                                Kód voucheru
+                            </label>
+                        </div>
+                        <div id="recaptcha" class="flex justify-start" data-recaptcha>
+                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                data-callback="onRecaptchaSuccess"></div>
+                        </div>
+                        <button type="submit" id="submitBtn" class="sv-btn-submit" data-submit disabled>
+                            Ověřit platnost
+                        </button>
+                    </form>
+                    <div id="verificationResult" class="mt-[24px] flex flex-col gap-[16px] hidden" data-verify-result>
+                        <div class="sv-alert sv-alert-success">
+                            <div class="flex items-center gap-[6px]">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="w-[19px] h-[19px]" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.66667 8L7.22222 9.55556L10.3333 6.44444M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="var(--alert-success-text)" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sv-alert-title">Voucher je platný</span>
+                            </div>
+                            <p class="sv-alert-desc">Platnost voucheru do: 
+                                <span data-valid-to>31. 05. 2025</span>
+                            </p>
+                        </div>
+
+                        <div class="sv-alert sv-alert-warning">
+                            <p class="sv-alert-desc">Voucher brzy vyprší. Prodloužit ho můžete kliknutím na tlačítko „Zobrazit detail“</p>
+                        </div>
+                        <button class="sv-btn-primary" data-btn-show-detail>Zobrazit detail</button>
+                        <button class="sv-btn-ghost" data-btn-check-another>Ověřit další voucher</button>
+                    </div>
+                </div>
+                <div id="vourcher-pin-form" class="sv-form-card hidden" data-pin-card>
+                    <form id="verificationPinForm" class="flex flex-col gap-[24px]" data-pin-form data-redirect="/detail-voucher.html">
+                        <p class="text-[15px] font-[400] text-[var(--muted)] text-center">Pro zobrazení voucheru zadejte <b class="font-[700] text-[var(--text)]">5 místný PIN</b> na voucheru</p>
+                        <div class="sv-float-root">
+                            <input type="text" id="voucherPin" name="voucherPin" class="sv-float-input peer" data-pin-input
+                                placeholder="PIN voucheru" required data-pin-input data-pin-length="5"/>
+                            <label for="voucherPin"
+                                class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
+                                PIN voucheru
+                            </label>
+                        </div>
+                        <button type="submit" id="submitPinBtn" class="sv-btn-submit" data-pin-submit disabled>
+                            Potvrdit PIN
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-[var(--footer-bg)] mt-auto">
+        <div class="mx-[16px] sm:mx-[24px] md:mx-[40px] lg:mx-[60px] xl:mx-[80px] py-[32px] sm:py-[40px] lg:py-[48px]">
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 gap-[40px]">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col gap-[32px]">
+                    <img src="/assets/sv-footer.svg" alt="Smart Voucher" class="w-[140px]" />
+                    <p class="text-[16px] font-[700] text-[var(--muted)]">
+                        Chytrý způsob, jak darovat radost.
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-3 lg:col-span-1 flex flex-col md:flex-row gap-4 justify-evenly">
+                    <div class="footer-card">
+                        <h6>Pro zákazníky</h6>
+                        <nav>
+                            <a href="#">Jak to funguje?</a>
+                            <a href="/verification.html">Ověření voucheru</a>
+                        </nav>
+                    </div>
+                    <div class="footer-card">
+                        <h6>Pro partnery</h6>
+                        <nav>
+                            <a href="#">Přihlášení</a>
+                            <a href="#">Chci prodávat vouchery</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-card">
+                        <h6>Podpora</h6>
+                        <nav>
+                            <a href="mailto:podpora@smartvoucher.cz" class="underline">podpora@smartvoucher.cz</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px bg-[var(--footer-hr)] md:mt-[64px] mt-[20px] mb-[12px]"></div>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-[12px] md:gap-[28px]">
+                <span class="text-[14px] font-[400] text-[var(--footer-text)] order-last md:order-first">© 2025 Smart
+                    Voucher</span>
+                <nav
+                    class="flex flex-col md:flex-row md:items-center gap-[12px] md:gap-[28px] text-[14px] text-[var(--footer-text)]">
+                    <a href="#" class="hover:underline">Obchodní Podmínky</a>
+                    <a href="#" class="hover:underline">Soukromí</a>
+                    <a href="#" class="hover:underline">Cookies</a>
+                    <a href="#" class="hover:underline">Provozují</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/js/ui.js"></script>
+</body>
+
+</html>
