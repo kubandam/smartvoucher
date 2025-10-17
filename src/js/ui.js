@@ -433,7 +433,8 @@
     if (!root) return;
     root.classList.add('hidden');
     root.setAttribute('aria-hidden', 'true');
-    document.documentElement.style.overflow = '';
+    document.documentElement.style.removeProperty('overflow');
+    document.body.style.removeProperty('overflow');
   };
 
   document.addEventListener('click', (e) => {
@@ -490,8 +491,11 @@
         if (modalElement) {
             modalElement.classList.add('hidden');
             modalElement.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
+            // Remove overflow hidden from both body and documentElement
+            document.body.style.removeProperty('overflow');
+            document.documentElement.style.removeProperty('overflow');
+            // Force reflow to ensure scroll is restored
+            void document.body.offsetHeight;
         }
     }
 
