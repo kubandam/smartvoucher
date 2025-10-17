@@ -5,18 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartVoucher</title>
-  <script type="module" crossorigin src="/assets/ui-DrHVtJk4.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/ui-BEWXy7f3.css">
+  <script type="module" crossorigin src="/assets/ui-D18SJEQB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/ui-DBFpANY_.css">
 </head>
 
 <body class="sv-page">
-    <hr class="absolute w-full border-[var(--footer-hr)] mt-[120px]">
+    <hr class="hidden md:block absolute w-full border-[var(--footer-hr)] mt-[120px]">
     <div class="sv-container mt-[16px] sm:mt-[20px]">
         <header class="sv-header">
             <div class="sv-header-row">
                 <a href="/" class="flex items-center">
-                    <img src="/assets/sv-header.svg" alt="Smart Voucher"
-                        class="sv-header-logo" />
+                    <img src="/assets/sv-header.svg" alt="Smart Voucher" class="sv-header-logo" />
                 </a>
                 <div class="sv-header-venue">
                     <img src="/assets/logo.svg" alt="Červený Jelen" />
@@ -43,7 +42,7 @@
             </div>
         </header>
         <main id="main" class="sv-main">
-            <section class="sv-compact-header">
+            <section class="sv-compact-header hidden md:flex">
                 <div class="sv-compact-thumb">
                     <img src="/assets/card2.jpg" alt="Škola čepování - ZÁŽITEK" />
                 </div>
@@ -68,30 +67,59 @@
             </section>
             <hr class="w-full border-[var(--footer-hr)] mt-[32px] mb-[32px] hidden md:block">
             <section class="max-w-[630px] w-full mx-auto">
-                <h3 class="text-center mb-[32px]">Prodloužit voucher</h3>
+                <a href="/" class="flex md:hidden items-center gap-3 text-[18px] font-[500] text-[var(--back-link)] w-fit underline mb-[32px]">
+                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.99372 9.11872C4.65201 9.46043 4.09799 9.46043 3.75628 9.11872L0.256282 5.61872C-0.0854273 5.27701 -0.0854273 4.72299 0.256282 4.38128L3.75628 0.881282C4.09799 0.539573 4.65201 0.539573 4.99372 0.881282C5.33543 1.22299 5.33543 1.77701 4.99372 2.11872L2.98744 4.125L13.125 4.125C13.6082 4.125 14 4.51675 14 5C14 5.48325 13.6082 5.875 13.125 5.875L2.98744 5.875L4.99372 7.88128C5.33543 8.22299 5.33543 8.77701 4.99372 9.11872Z"
+                            fill="currentColor" />
+                    </svg>
+                    Zpět do výběru
+                </a>
+                <h2 class="text-center mb-[32px]">Prodloužit voucher</h2>
+                <section
+                    class="bg-white rounded-[16px] md:hidden max-w-[630px] w-full mx-auto mt-[32px] mb-[32px] p-[16px]"
+                    style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);">
+                    <h3 class="mb-[32px]">Vás Voucheru</h3>
+                    <div>
+                        <div class="w-full aspect-square max-h-[224px]">
+                            <img src="/assets/card2.jpg" alt="Škola čepování - ZÁŽITEK"
+                                class="w-full h-full object-cover rounded-[8px]" />
+                        </div>
+                        <h5 class="my-[16px]">Škola čepování - ZÁŽITEK</h5>
+                        <p class="text-[18px] text-[var(--muted)] mb-[32px]">
+                            Originální dárek pro jednotlivce i pro skupiny. Naučte se čepovat a porozuměijte...
+                        </p>
+                        <p class="text-[18px] font-[500] text-[var(--muted)] mb-[8px]">Platnost voucheru do:</p>
+                        <h5 class="text-[var(--text)]">31. 05. 2025</h5>
+                    </div>
+                </section>
                 <form class="bg-white rounded-[16px] border border-[var(--footer-hr)] p-[16px] md:p-[32px]">
-                    <p class="text-[16px] font-[400] text-[var(--text)] mb-[32px] text-center md:text-left w-[80%] mx-auto md:w-full">
-                        Můžete prodloužit platnost do 
+                    <p
+                        class="text-[16px] font-[400] text-[var(--text)] mb-[32px] text-center md:text-left w-[80%] mx-auto md:w-full">
+                        Můžete prodloužit platnost do
                         <b>29. 8. 2025</b> za poplatek 500,00 Kč
                     </p>
                     <h5 class="mb-[12px]">Fakturační údaje</h5>
                     <div class="flex flex-col gap-[16px]">
                         <div class="sv-float-root">
-                            <input type="text" name="first_name" placeholder="Jméno" class="sv-float-input peer" id="first_name" />
+                            <input type="text" name="first_name" placeholder="Jméno" class="sv-float-input peer"
+                                id="first_name" />
                             <label for="first_name"
                                 class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
                                 Jméno
                             </label>
                         </div>
                         <div class="sv-float-root">
-                            <input type="text" name="last_name" placeholder="Příjmení" class="sv-float-input peer" id="last_name" />
+                            <input type="text" name="last_name" placeholder="Příjmení" class="sv-float-input peer"
+                                id="last_name" />
                             <label for="last_name"
                                 class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
                                 Příjmení
                             </label>
                         </div>
                         <div class="sv-float-root">
-                            <input type="email" name="email" placeholder="E-mail" class="sv-float-input peer" id="email" />
+                            <input type="email" name="email" placeholder="E-mail" class="sv-float-input peer"
+                                id="email" />
                             <label for="email"
                                 class="sv-float-label peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-focus:top-[2px] peer-focus:text-[12px] peer-[:not(:placeholder-shown)]:top-[2px] peer-[:not(:placeholder-shown)]:text-[12px]">
                                 E-mail
@@ -106,8 +134,7 @@
                             <fieldset class="sv-pay-group" data-payment-group>
                                 <label class="payment-option">
                                     <input class="peer sr-only" type="radio" name="payment" value="qr" data-payment />
-                                    <div
-                                        class="payment-option-inner">
+                                    <div class="payment-option-inner">
                                         <span class="payment-option-check">
                                             <svg class="payment-check opacity-0 transition-opacity" width="10"
                                                 height="8" viewBox="0 0 10 8" fill="currentColor"
@@ -122,8 +149,7 @@
                                                     <div class="payment-option-title">
                                                         QR okamžitá platba
                                                     </div>
-                                                    <p
-                                                        class="payment-option-desc">
+                                                    <p class="payment-option-desc">
                                                         Rychlá platba pomocí QR kódu ve vašem
                                                         bankovnictví
                                                     </p>
@@ -182,8 +208,7 @@
                                                         <div class="payment-option-title">
                                                             Google Pay
                                                         </div>
-                                                        <p
-                                                            class="payment-option-desc">
+                                                        <p class="payment-option-desc">
                                                             Rychlá a bezpečná platba pomocí Google Pay
                                                         </p>
                                                     </div>
@@ -214,8 +239,7 @@
                                                         <div class="payment-option-title">
                                                             Apple Pay
                                                         </div>
-                                                        <p
-                                                            class="payment-option-desc">
+                                                        <p class="payment-option-desc">
                                                             Rychlá a bezpečná platba pomocí Apple Pay
                                                         </p>
                                                     </div>
@@ -247,8 +271,7 @@
                                                         <div class="payment-option-title">
                                                             Platba kartou
                                                         </div>
-                                                        <p
-                                                            class="payment-option-desc">
+                                                        <p class="payment-option-desc">
                                                             Bezpečná platba kartou přes zabezpečenou
                                                             platební bránu
                                                         </p>
@@ -263,11 +286,10 @@
                                     </label>
                                 </div>
                             </fieldset>
-                            <a href="#" class="sv-pay-more-link"
-                                data-action="show" data-target="#payments-more">Více platebních možností</a>
-                            <a href="#"
-                                class="sv-pay-more-link hidden"
-                                data-action="hide" data-target="#payments-more">Skrýt platební možnosti</a>
+                            <a href="#" class="sv-pay-more-link" data-action="show" data-target="#payments-more">Více
+                                platebních možností</a>
+                            <a href="#" class="sv-pay-more-link hidden" data-action="hide"
+                                data-target="#payments-more">Skrýt platební možnosti</a>
                     </div>
 
                     <button
@@ -282,7 +304,8 @@
                                 podmínkami.</a>
                         </p>
                         <div class="flex items-center justify-center gap-2">
-                            <p class="text-[12px] text-[var(--muted)] font-[400] text-center md:text-left flex flex-col md:flex-row gap-[4px]">
+                            <p
+                                class="text-[12px] text-[var(--muted)] font-[400] text-center md:text-left flex flex-col md:flex-row gap-[4px]">
                                 <span class="flex items-center gap-[6px] justify-center md:justify-start">
                                     <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +315,7 @@
                                     </svg>
                                     Tato stránka je zabezpečená.
                                 </span>
-                                <br class="block md:hidden"/>
+                                <br class="block md:hidden" />
                                 Všechny vaše osobní údaje jsou v bezpečí.
                             </p>
                         </div>
@@ -301,7 +324,7 @@
             </section>
             <section>
                 <div
-                    class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-[64px] md:gap-[36px] lg:gap-[40px] mt-[160px]">
+                    class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-[64px] md:gap-[36px] lg:gap-[40px] md:mt-[160px] mt-[64px]">
                     <div class="md:col-span-2 lg:col-span-2">
                         <h2>O podniku</h2>
                         <div class="flex flex-col gap-4 mt-[32px] about-text">
