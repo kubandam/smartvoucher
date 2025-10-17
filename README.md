@@ -2,6 +2,10 @@
 
 Moderný webový systém pre predaj a správu darčekových poukazov do reštaurácií. Projekt je vyvinutý pre reštauráciu **Červený Jelen** a poskytuje kompletné riešenie od výberu voucheru až po jeho verifikáciu.
 
+## 🌐 Live Preview
+
+**👉 [Pozrite si živú ukážku aplikácie](https://smartvoucher.vercel.app/)**
+
 ---
 
 ## 📋 Obsah
